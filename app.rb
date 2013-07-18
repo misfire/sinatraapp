@@ -37,7 +37,6 @@ class Product
   property  :updated_at,    DateTime,  :required => false
 
   belongs_to :group
-
   has n, :votes
 
 end
@@ -72,7 +71,6 @@ class Vote
 
 end
 
-DataMapper.finalize
 
 # Create or upgrade the database all at once
 DataMapper.auto_upgrade!
