@@ -78,6 +78,16 @@ get '/admin/delete/:id' do
   redirect('/admin')
 end
 
+get '/admin/edit/:id' do
+  page = params[:p] || 'edit'
+  @day = Group.get(params[:id])
+  if @day
+    erb :"admin/#{page}"
+  else
+    redirect('/admin')
+  end  
+end
+
 get '/vote' do
 "this a vote page"
 end
