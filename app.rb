@@ -88,6 +88,15 @@ get '/admin/edit/:id' do
   end  
 end
 
+post '/update' do
+  @day = Group.get(params[:id])
+  if @day.update(params[:day])
+    redirect "/show/#{@day.id}"
+  else 
+    redirect('/admin')
+  end  
+end
+
 get '/vote' do
 "this a vote page"
 end
