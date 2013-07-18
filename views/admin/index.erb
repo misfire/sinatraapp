@@ -6,7 +6,7 @@ This is the admin index.html
 <% @groups.each_with_index do |group,i| %>
 	<tr<%= ' class="alt"' if i%2==0 %>>
 	  <td><a href="/show/<%= group.id %>"><%= group.name %></a></td>
-	  <td><span class="label">Votes:</span></span><%= group.is_active %></span>
+	  <td><span class="label">Is Active?:</span></span><%= group.is_active %></span>
 	  <td><a href="/edit/<%= group.id %>">edit</a></td>
 	  <td><a href="/delete/<%= group.id %>">delete</a></td>
 	</tr>	
