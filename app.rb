@@ -40,7 +40,7 @@ post '/' do
 end
 
 get '/admin' do
-  "admin page son"
+  erb :"admin/#{page}"
 end
 
 get '/vote' do
