@@ -29,14 +29,18 @@ get '/' do
 end
 
 post '/' do
-@auth = FBGraph::Canvas.parse_signed_request(APP_CODE, params[:signed_request])
-if @auth['page']['liked'] == true
-    liked = true
-    erb liked
-  else
-    liked = false
-    erb :check
-  end
+#@auth = FBGraph::Canvas.parse_signed_request(APP_CODE, params[:signed_request])
+#if @auth['page']['liked'] == true
+#    liked = true
+#    erb liked
+#  else
+#    liked = false
+#    erb :check
+#  end
+end
+
+get '/admin' do
+  "admin page son"
 end
 
 get '/vote' do
