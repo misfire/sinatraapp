@@ -1,4 +1,6 @@
 source :gemcutter
 
 gem "sinatra"
-gem "fbgraph"
+gem "pg"
+gem "data_mapper"
+gem "dm-postgres-adapter"

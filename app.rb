@@ -1,6 +1,27 @@
 require 'rubygems'
 require 'sinatra'
-require 'fbgraph'
+require "data_mapper"
+
+
+# database connection from heroku
+DataMapper.setup(:default, ENV["DATABASE_URL"])
+
+class Group
+  
+  include DataMapper::Resource
+  
+  property  :id,            Serial
+  property  :name,          String, :required => true
+  property  :is_active,     Boolean, :required => true
+  property  :promo_code,    String, :required => true
+  property  :created_at,    DateTime,  :required => false
+  property  :updated_at,    DateTime,  :required => false
+    
+end
+
+# Create or upgrade the database all at once
+DataMapper.auto_upgrade!
+>>>>>>> 7c543dd8b4f2f94dccc654a99e21b5bc63f00e66
 
 
 get '/' do
