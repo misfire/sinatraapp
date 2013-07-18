@@ -72,6 +72,7 @@ class Vote
 
 end
 
+DataMapper.finalize
 
 # Create or upgrade the database all at once
 DataMapper.auto_upgrade!
