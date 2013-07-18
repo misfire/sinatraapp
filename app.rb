@@ -1,9 +1,22 @@
 require 'rubygems'
 require 'sinatra'
+require 'fbgraph'
+
 
 get '/' do
-	@name = "Danny"
-	erb :index
+  page = params[:p] || 'check'
+  erb :"#{page}"
+end
+
+post '/' do
+@auth = FBGraph::Canvas.parse_signed_request(APP_CODE, params[:signed_request])
+if @auth['page']['liked'] == true
+    liked = true
+    erb liked
+  else
+    liked = false
+    erb :check
+  end
 end
 
 get '/vote' do
