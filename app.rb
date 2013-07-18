@@ -61,7 +61,7 @@ class Vote
   include DataMapper::Resource
 
   property  :id,            Serial
-  property  :email,         String, required => false
+  property  :email,         String, :required => false
   property  :ip_address,    String
   property  :subscribed,    Boolean
   property  :username,      String
@@ -73,7 +73,7 @@ end
 
 
 # Create or upgrade the database all at once
-DataMapper.auto_migrate!
+DataMapper.auto_upgrade!
 
 
 get '/' do
