@@ -2,6 +2,9 @@ require 'rubygems'
 require 'sinatra'
 require "data_mapper"
 
+set :raise_errors, true
+set :show_exceptions, true
+
 
 # database connection from heroku
 DataMapper.setup(:default, ENV["DATABASE_URL"])
