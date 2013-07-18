@@ -64,7 +64,7 @@ get 'admin/show/:id' do
   page = params[:p] || 'show'
   @day = Group.get(params[:id])
   if @day
-  erb :"admin/#{page}"
+  erb :"admin/show"
   else
     redirect('/admin')
   end
