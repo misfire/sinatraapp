@@ -40,6 +40,7 @@ post '/' do
 end
 
 get '/admin' do
+  page = params[:p] || 'index'
   erb :"admin/#{page}"
 end
 
