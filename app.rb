@@ -57,7 +57,7 @@ post '/admin/create' do
   if @day.save
     redirect "/show/#{@day.id}"
   else
-    redirect "/admin/"
+    redirect "/admin"
   end
 end
 
