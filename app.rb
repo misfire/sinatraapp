@@ -70,6 +70,14 @@ get '/admin/show/:id' do
   end
 end
 
+get 'admin/delete/:id' do
+  day = Group.get(params[:id])
+  unless day.nil?
+    day.destroy
+  end
+  redirect('/admin')
+end
+
 get '/vote' do
 "this a vote page"
 end
