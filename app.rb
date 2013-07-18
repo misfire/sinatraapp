@@ -151,8 +151,8 @@ post '/admin/day/update' do
 end
 
 get '/admin/day/:id/products' do
-  @day = Group.get(params[:id])
-  products = @day.products
+  day = Group.get(params[:id])
+  products = day.products
   erb products
 
 end
