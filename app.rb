@@ -30,7 +30,6 @@ class Product
   property  :productname,   String, :required => true
   property  :description,   String, :required => true
   property  :picture,       String, :required => true
-  property  :groups_id,     Integer, :required => true
   property  :created_at,    DateTime,  :required => false
   property  :updated_at,    DateTime,  :required => false
 
@@ -48,7 +47,6 @@ class Promotion
   property  :productname,   String, :required => true
   property  :description,   String, :required => true
   property  :picture,       String, :required => true
-  property  :groups_id,     Integer, :required => true
   property  :created_at,    DateTime,  :required => false
   property  :updated_at,    DateTime,  :required => false
 
@@ -65,7 +63,6 @@ class Vote
   property  :ip_address,    String
   property  :subscribed,    Boolean
   property  :username,      String
-  property  :product_id,    Integer
   property  :created_at,    DateTime 
 
   belongs_to :product
