@@ -52,7 +52,7 @@ get '/admin/new' do
 end
 
 post '/admin/create' do
-  @day = Group.new(params[:name => 'wtf', :is_active => true, :promo_code => "ok"])
+  @day = Group.new(params[:day])
   if @day.save
     redirect "/admin/show/#{@day.id}"
   else
