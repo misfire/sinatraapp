@@ -27,7 +27,7 @@ end
 
 class Product
 
-  include Datamapper::Resource
+  include DataMapper::Resource
 
   property  :id,            Serial
   property  :productname,   String, :required => true
@@ -43,7 +43,7 @@ end
 
 class Promotion
 
-  include Datamapper::Resource
+  include DataMapper::Resource
 
   property  :id,            Serial
   property  :productname,   String, :required => true
@@ -58,7 +58,7 @@ end
 
 class Vote
 
-  include Datamapper::Resource
+  include DataMapper::Resource
 
   property  :id,            Serial
   property  :email,         String, required => false
