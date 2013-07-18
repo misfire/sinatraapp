@@ -55,7 +55,7 @@ end
 post '/admin/create' do
   @day = Group.new(params[:day])
   if @day.save
-    redirect "/admin/"
+    redirect "/show/#{@day.id}"
   else
     redirect "/admin/"
   end
@@ -63,7 +63,7 @@ end
 
 get '/show/:id' do
   page = params[:p] || 'show'
-  @day = Groups.get(params[:id])
+  @day = Group.get(params[:id])
   if @day
   erb :"admin/#{page}"
   else
