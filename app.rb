@@ -88,7 +88,7 @@ get '/admin/edit/:id' do
   end  
 end
 
-post '/update' do
+post '/admin/update' do
   @day = Group.get(params[:id])
   if @day.update(params[:day])
     redirect "/show/#{@day.id}"
