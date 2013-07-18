@@ -41,6 +41,8 @@ end
 
 get '/admin' do
   page = params[:p] || 'index'
+  @title = "List Arts"
+  @arts = Art.all(:order => [:name.asc])
   erb :"admin/#{page}"
 end
 
