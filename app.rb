@@ -41,7 +41,7 @@ end
 
 get '/admin' do
   page = params[:p] || 'index'
-  @groups = Group.all(:order => [:id.asc])
+  @groups = Group.all(:order => [:name.asc])
   erb :"admin/#{page}"
 end
 
@@ -54,13 +54,13 @@ end
 post '/admin/create' do
   @day = Group.new(params[:day])
   if @day.save
-    redirect "/show/#{@day.id}"
+    redirect "admin/show/#{@day.id}"
   else
     redirect "/admin"
   end
 end
 
-get '/show/:id' do
+get 'admin/show/:id' do
   page = params[:p] || 'show'
   @day = Group.get(params[:id])
   if @day
