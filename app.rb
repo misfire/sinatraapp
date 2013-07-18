@@ -16,8 +16,62 @@ class Group
   property  :promo_code,    String, :required => true
   property  :created_at,    DateTime,  :required => false
   property  :updated_at,    DateTime,  :required => false
+
+  has n, :products
+  has n, :promotions
     
 end
+
+class Product
+
+  include Datamapper::Resource
+
+  property  :id,             Serial
+  property  :productname,    String, :required => true
+  property  :description,    String, :required => true
+  property  :picture,        String, :required => true
+  property  :groups_id,      Integer, :required => true
+  property  :created_at,    DateTime,  :required => false
+  property  :updated_at,    DateTime,  :required => false
+
+  belongs_to :group
+
+  has n, :votes
+
+end
+
+class Promotion
+
+  include Datamapper::Resource
+
+  property  :id,             Serial
+  property  :productname,    String, :required => true
+  property  :description,    String, :required => true
+  property  :picture,        String, :required => true
+  property  :groups_id,      Integer, :required => true
+  property  :created_at,    DateTime,  :required => false
+  property  :updated_at,    DateTime,  :required => false
+
+  belongs_to :group
+
+end
+
+class Vote
+
+  include Datamapper::Resource
+
+  property  :id,             Serial
+  property  :email,          String, required => false
+  property  :ip_address,     String
+  property  :subscribed,     Boolean
+  property  :username,       String
+  property  :product_id,     Integer
+  property :created_at,      DateTime 
+
+  belongs_to :product
+
+end
+
 
 # Create or upgrade the database all at once
 DataMapper.auto_upgrade!
