@@ -70,7 +70,7 @@ get '/admin/show/:id' do
   end
 end
 
-get 'admin/delete/:id' do
+get '/admin/delete/:id' do
   day = Group.get(params[:id])
   unless day.nil?
     day.destroy
