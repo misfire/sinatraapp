@@ -21,7 +21,6 @@ end
 
 # Create or upgrade the database all at once
 DataMapper.auto_upgrade!
->>>>>>> 7c543dd8b4f2f94dccc654a99e21b5bc63f00e66
 
 
 get '/' do
