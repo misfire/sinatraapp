@@ -60,7 +60,7 @@ post '/admin/create' do
   end
 end
 
-get 'admin/show/:id' do
+get '/admin/show/:id' do
   page = params[:p] || 'show'
   @day = Group.get(params[:id])
   if @day
