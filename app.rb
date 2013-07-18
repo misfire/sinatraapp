@@ -91,7 +91,7 @@ end
 post '/admin/update' do
   @day = Group.get(params[:id])
   if @day.update(params[:day])
-    redirect "/show/#{@day.id}"
+    redirect "/admin/show/#{@day.id}"
   else 
     redirect('/admin')
   end  
