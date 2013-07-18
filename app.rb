@@ -46,6 +46,31 @@ get '/admin' do
   erb :"admin/#{page}"
 end
 
+get '/admin/new' do
+  page = params[:p] || 'new'
+  @title = "Create new Day"
+  erb :"admin/#{page}"
+end
+
+post '/admin/create' do
+  @day = Group.new(params[:day])
+  if @day.save
+    redirect "/admin/"
+  else
+    redirect "/admin/"
+  end
+end
+
+get '/show/:id' do
+  page = params[:p] || 'show'
+  @day = Groups.get(params[:id])
+  if @day
+  erb :"admin/#{page}"
+  else
+    redirect('/admin')
+  end
+end
+
 get '/vote' do
 "this a vote page"
 end
