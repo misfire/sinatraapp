@@ -41,7 +41,6 @@ end
 
 get '/admin' do
   page = params[:p] || 'index'
-  @title = "List Days"
   @groups = Group.all(:order => [:id.asc])
   erb :"admin/#{page}"
 end

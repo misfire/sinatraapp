@@ -8,8 +8,8 @@ This is the admin index.html
 	  <td><img src="/arts/<%= group.filename %>" /></td>
 	  <td><a href="/show/<%= group.id %>"><%= group.title %></a></td>
 	  <td><span class="label">Votes:</span></span><%= group.votes.count %></span>
-	  <td><a href="/edit/<%= art.id %>">edit</a></td>
-	  <td><a href="/delete/<%= art.id %>">delete</a></td>
+	  <td><a href="/edit/<%= group.id %>">edit</a></td>
+	  <td><a href="/delete/<%= gruop.id %>">delete</a></td>
 	</tr>	
 <% end %>
 </table>
