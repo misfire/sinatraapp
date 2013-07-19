@@ -1,12 +1,16 @@
-<h3>Product List</h3>
-
-<table border="0" cellpartding="0" cellspacing="10" class="list">
-<% @products.each_with_index do |product,i| %>
-	<tr<%= ' class="alt"' if i%2==0 %>>
-	  <td><a href="/show/<%= product.id %>"><%= product.productname %></a></td>
-	  <td><span class="label">Votes:</span></span><%= product.description %></span>
-	  <td><a href="/edit/<%= product.id %>">edit</a></td>
-	  <td><a href="/delete/<%= product.id %>">delete</a></td>
-	</tr>	
-<% end %>
-</table>
+<p>
+  <b>Group ID:</b>
+  <%= @product.id %>
+</p>
+<p>
+  <b>Name:</b>
+  <%= @product.productname %>
+</p>
+<p>
+  <b>Is Active:</b>
+  <%= @product.description %>
+</p>
+<p>
+  <b>Promo Code:</b>
+  <%= @product.picture %>
+</p>
