@@ -201,12 +201,13 @@ post '/admin/day/products/update' do
 end
 
 get '/admin/day/products/delete/:dayid/:id' do
+  page = :dayid
   day = Group.get(params[:dayid])
   product = day.products.get(params[:id])
   unless product.nil?
     product.destroy
   end
-  redirect('/admin/day/show/:dayid}')
+  redirect('/admin/day/show/#{page}}')
 end
 
 
