@@ -15,5 +15,15 @@
   <%= @day.promo_code %>
 </p>
 
-<%= @day.products %>
+
+<table border="0" cellpartding="0" cellspacing="10" class="list">
+<% @day.products.each_with_index do |group,i| %>
+	<tr<%= ' class="alt"' if i%2==0 %>>
+	  <td><a href="/admin/day/show/<%= group.id %>"><%= group.productname %></a></td>
+	  <td><span class="label">Is Active?:</span></span><%= group.description %></span>
+	  <td><a href="/admin/day/edit/<%= group.id %>">edit</a></td>
+	  <td><a href="/admin/day/delete/<%= group.id %>">delete</a></td>
+	</tr>	
+<% end %>
+</table>
 
