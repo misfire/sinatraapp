@@ -150,11 +150,6 @@ post '/admin/day/update' do
   end  
 end
 
-get '/admin/day/products/:id' do
-  page = params[:p] || 'show'
-  day = Group.get(params[:id])
-  erb :"admin/products/#{page}"
-end
 
 get '/admin/day/products/new' do
   page = params[:p] || 'new'
