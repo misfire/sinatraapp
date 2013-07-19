@@ -159,7 +159,7 @@ end
 
 post '/admin/day/products/create' do
   day = Group.get(1)
-  @product = day.products.new(params[:day])
+  @product = day.products.new(params[:product])
   if @product.save
     "SUCCESS!!!!"
   else
