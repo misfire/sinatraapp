@@ -157,6 +157,16 @@ get '/admin/day/products/new' do
   erb :"admin/products/#{page}"
 end
 
+post '/admin/day/products/create/1' do
+  day = Group.get(1)
+  @product = day.products.new(params[:day])
+  if @product.save
+    "SUCCESS!!!!"
+  else
+    redirect "/admin"
+  end
+end
+
 
 get '/vote' do
 "this a vote page"
