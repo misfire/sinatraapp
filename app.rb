@@ -151,17 +151,18 @@ post '/admin/day/update' do
 end
 
 
-get '/admin/day/products/new' do
+get '/admin/day/products/new/:dayid' do
   page = params[:p] || 'new'
+  @day = Group.get(params[:dayid])
   @title = "Create new product"
   erb :"admin/products/#{page}"
 end
 
-post '/admin/day/products/create' do
-  day = Group.get(13)
+post '/admin/day/products/create/:dayid' do
+  day = Group.get(params[:dayid])
   @product = day.products.new(params[:product])
   if @product.save
-    "SUCCESS!!!!"
+    "/admin/day/products/show/#{day.id}"
   else
     redirect "/admin"
   end
