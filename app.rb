@@ -158,7 +158,7 @@ get '/admin/day/products/new' do
 end
 
 post '/admin/day/products/create' do
-  day = Group.get(1)
+  day = Group.get(13)
   @product = day.products.new(params[:product])
   if @product.save
     "SUCCESS!!!!"
