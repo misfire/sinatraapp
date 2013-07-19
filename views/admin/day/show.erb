@@ -20,7 +20,7 @@
 	<h2>Product List</h2>
 <% @day.products.each_with_index do |group,i| %>
 	<tr<%= ' class="alt"' if i%2==0 %>>
-	  <td><a href="/admin/day/products/show/<%= group.id %>"><%= group.productname %></a></td>
+	  <td><a href="/admin/day/products/show/<%= @day.id %>/<%= group.id %>"><%= group.productname %></a></td>
 	  <td><span class="label">Is Active?:</span></span><%= group.description %></span>
 	  	<td><span class="label">Picture:</span></span><%= group.picture %></span>
 	  <td><a href="/admin/day/products/edit/<%= @day.id %>/<%= group.id %>">edit</a></td>
