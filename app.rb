@@ -151,11 +151,11 @@ post '/admin/day/update' do
 end
 
 get '/admin/day/:id/products' do
-  put :id
+  puts :id
   page = params[:p] || 'show'
   @day = Group.get(params[:id])
   @products = @day.products
-  put @products
+  puts @products
   erb :"admin/products/#{page}"
 end
 
