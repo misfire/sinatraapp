@@ -1,17 +1,12 @@
-<p>
-  <b>ID:</b>
-  <%= @products.id %>
-</p>
-<p>
-  <b>Name:</b>
-  <%= @products.productname %>
-</p>
-<p>
-  <b>Is Active:</b>
-  <%= @products.description %>
-</p>
-<p>
-  <b>Promo Code:</b>
-  <%= @products.picture %>
-</p>
+<h3>Product List</h3>
 
+<table border="0" cellpartding="0" cellspacing="10" class="list">
+<% @day.each_with_index do |day,i| %>
+	<tr<%= ' class="alt"' if i%2==0 %>>
+	  <td><a href="/show/<%= day.product.id %>"><%= day.product.productname %></a></td>
+	  <td><span class="label">Votes:</span></span><%= day.product.description %></span>
+	  <td><a href="/edit/<%= day.product.id %>">edit</a></td>
+	  <td><a href="/delete/<%= day.product.id %>">delete</a></td>
+	</tr>	
+<% end %>
+</table>
