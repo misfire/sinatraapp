@@ -157,7 +157,7 @@ get '/admin/day/products/new' do
   erb :"admin/products/#{page}"
 end
 
-post '/admin/day/product/create' do
+post '/admin/day/products/create' do
   day = Group.get(13)
   @product = day.products.new(params[:day])
   if @product.save
