@@ -206,7 +206,7 @@ get '/admin/day/products/delete/:dayid/:id' do
   unless product.nil?
     product.destroy
   end
-  redirect('/admin/day/show/#{day.id}')
+  redirect('/admin/day/show/:dayid}')
 end
 
 
