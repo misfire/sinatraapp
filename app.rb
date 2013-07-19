@@ -20,8 +20,8 @@ class Group
   property  :created_at,    DateTime,  :required => false
   property  :updated_at,    DateTime,  :required => false
 
-  has n, :products
-  has n, :promotions
+  has n, :products, :constraint => :destroy
+  has n, :promotions, :constraint => :destroy
     
 end
 
