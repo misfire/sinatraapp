@@ -169,8 +169,8 @@ end
 
 get '/admin/day/products/show/:dayid/:id' do
   page = params[:p] || 'show'
-  day = Group.get(params[:dayid])
-  @product = day.products.get(params[:id])
+  @day = Group.get(params[:dayid])
+  @product = @day.products.get(params[:id])
   if @product
   erb :"admin/products/#{page}"
   else
