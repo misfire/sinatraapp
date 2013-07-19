@@ -152,7 +152,7 @@ end
 
 get '/admin/day/:id/products' do
   page = params[:p] || 'show'
-  @products = Group.find(@user.id, :include => :products)
+  @products = Group.find(@group.id, :include => :products)
   erb :"admin/products/#{page}"
 end
 
