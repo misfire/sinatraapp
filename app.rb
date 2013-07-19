@@ -178,6 +178,17 @@ get '/admin/day/products/show/:dayid/:id' do
   end
 end
 
+get '/admin/day/products/edit/:dayid/:id' do
+  page = params[:p] || 'edit'
+  @day = Group.get(params[:dayid])
+  @product = @day.products.get(params[:id])
+  if @product
+  erb :"admin/products/#{page}"
+  else
+    redirect('/admin')
+  end
+end
+
 
 get '/vote' do
 "this a vote page"
