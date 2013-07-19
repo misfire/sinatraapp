@@ -193,10 +193,19 @@ post '/admin/day/products/update' do
   @day = Group.get(params[:dayid])
   @product = @day.products.get(params[:id])
   if @product.update(params[:product])
-    redirect "/admin/day/show/#{@day.id}/#{@product.id}"
+    redirect "/admin/day/products/show/#{@day.id}/#{@product.id}"
   else 
     redirect('/admin')
   end  
+end
+
+get '/admin/day/products/delete/:dayid/:id' do
+  day = Group.get(params[:dayid])
+  product = day.products.get(params[:id])
+  unless product.nil?
+    product.destroy
+  end
+  redirect('/admin/day/show/:dayid')
 end
 
 
