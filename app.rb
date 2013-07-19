@@ -151,7 +151,7 @@ post '/admin/day/update' do
 end
 
 get '/admin/day/products/:id' do
-  puts :id
+  puts "#{:id} wtf"
   page = params[:p] || 'show'
   day = Group.get(params[:id])
   puts day
