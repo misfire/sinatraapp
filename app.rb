@@ -162,7 +162,7 @@ post '/admin/day/products/create/:dayid' do
   day = Group.get(params[:dayid])
   @product = day.products.new(params[:product])
   if @product.save
-    redirect "/admin/day/products/show/#{day.id}"
+    redirect "/admin/day/show/#{day.id}"
   else
     redirect "/admin"
   end
