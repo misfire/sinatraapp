@@ -153,7 +153,7 @@ end
 
 get '/admin/day/products/new/:dayid' do
   page = params[:p] || 'new'
-  @day = Group.get(params[:Dayid])
+  @day = Group.get(params[:dayid])
   @title = "Create new product"
   erb :"admin/products/#{page}"
 end
