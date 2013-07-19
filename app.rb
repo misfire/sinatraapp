@@ -160,8 +160,8 @@ end
 
 get '/admin/day/products/new' do
   page = params[:p] || 'new'
-  @title = "Create new Day"
-  erb :"admin/day/#{page}"
+  @title = "Create new product"
+  erb :"admin/day/products/#{page}"
 end
 
 
