@@ -167,9 +167,9 @@ post '/admin/day/products/create' do
   end
 end
 
-get '/admin/day/products/show/:id' do
+get '/admin/day/products/show/:dayid/:id' do
   page = params[:p] || 'show'
-  @day = Group.get(params[:id])
+  @day = Group.get(params[:dayid])
   if @day
   erb :"admin/day/#{page}"
   else
