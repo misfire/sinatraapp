@@ -152,7 +152,8 @@ end
 
 get '/admin/day/:id/products' do
   page = params[:p] || 'show'
-  @products = Group.all(:order => [:name.asc])
+  @day = Group.get(params[:id])
+  @products = @day.products
   put @products
   erb :"admin/products/#{page}"
 end
