@@ -94,7 +94,7 @@ end
 
 get '/admin' do
   page = params[:p] || 'index'
-  @groups = Group.all(:order => [:name.asc])
+  @groups = Group.all(:order => [:id.asc])
   erb :"admin/#{page}"
 end
 
