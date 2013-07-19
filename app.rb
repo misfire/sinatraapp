@@ -151,10 +151,10 @@ post '/admin/day/update' do
 end
 
 get '/admin/day/products/:id' do
-  puts "wow way to not PRINT ANYTHING HEROKU"
   page = params[:p] || 'show'
   day = Group.get(params[:id])
   puts day
+  p day
  # erb :"admin/products/#{page}"
 end
 
