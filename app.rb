@@ -153,7 +153,14 @@ end
 get '/admin/day/:id/products' do
   page = params[:p] || 'show'
   @products = Group.all(:order => [:name.asc])
+  put @products
   erb :"admin/products/#{page}"
+end
+
+get '/admin/day/products/new' do
+  page = params[:p] || 'new'
+  @title = "Create new Day"
+  erb :"admin/day/#{page}"
 end
 
 
