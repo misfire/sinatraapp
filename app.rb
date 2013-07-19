@@ -172,7 +172,7 @@ get '/admin/day/products/show/:dayid/:id' do
   day = Group.get(params[:dayid])
   @product = day.products.get(params[:id])
   if @product
-  erb :"admin/day/products/#{page}"
+  erb :"admin/products/#{page}"
   else
     redirect('/admin')
   end
