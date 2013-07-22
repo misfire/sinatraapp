@@ -33,8 +33,7 @@
 	  <td><a href="/admin/day/products/show/<%= @day.id %>/<%= group.id %>"><%= group.productname %></a></td>
 	  <td><span class="label">Description: </span><%= group.description %></span>
 	  	<td><span class="label">Picture: </span><%= group.picture %></span>
-	  <td><a href="/admin/day/products/edit/<%= @day.id %>/<%= group.id %>">edit</a></td>
-	  <td><a href="/admin/day/products/delete/<%= @day.id %>/<%= group.id %>">delete</a></td>
+	  <td><a class="btn" href="/admin/day/products/edit/<%= @day.id %>/<%= group.id %>">edit</a><a class="btn btn-danger" href="/admin/day/products/delete/<%= @day.id %>/<%= group.id %>">delete</a></td>
 	  <td>Votes: <a href="/admin/day/votes/show/<%= @day.id %>/<%= group.id %>"><%= group.votes.count %></a></td>
 	  <td><a href="/admin/day/products/vote/<%= @day.id %>/<%= group.id %>">Vote This!</a></td>
 	</tr>	
