@@ -282,8 +282,8 @@ end
 
 get '/admin/day/votes/show/:dayid/:id' do
   @day = Group.get(params[:dayid])
-  product = @day.products.get(params[:id])
-  @votes = product.votes.all
+  @product = @day.products.get(params[:id])
+  @votes = @product.votes.all
   erb :"admin/votes/show", :layout => :admin
 end
 

@@ -1,12 +1,13 @@
-<table border="0" cellpartding="0" cellspacing="10" class="list">
-	<h2>Votes List for Product</h2>
+<div class="container">
+<table class="table" border="0" cellpartding="0" cellspacing="10" class="list">
+	<h2>Votes List for Product: <%= product.productname %></h2>
 <% @votes.each_with_index do |group,i| %>
 	<tr<%= ' class="alt"' if i%2==0 %>>
-	  <td><a href="/admin/day/promotions/show/<%= @day.id %>/<%= group.id %>"><%= group.email %></a></td>
-	  <td><span class="label">Description: </span></span><%= group.ip_address %></span>
-	  	<td><span class="label">Picture: </span></span><%= group.subscribed %></span>
-	  <td><a href="/admin/day/promotions/edit/<%= @day.id %>/<%= group.id %>">edit</a></td>
-	  <td><a href="/admin/day/promotions/delete/<%= @day.id %>/<%= group.id %>">delete</a></td>
+	  <td><a href="/admin/day/products/show/<%= @day.id %>/<%= group.id %>"><%= group.email %></a></td>
+	  <td><%= group.ip_address %></dd>
+	  	<td><%= group.subscribed %></td>
+	  	<td><%= group.username %></td>
 	</tr>	
 <% end %>
 </table>
+</div>
