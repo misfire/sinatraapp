@@ -1,6 +1,7 @@
+<div class="container">
 <h3>Edit</h3>
 
-<form	action="/admin/day/promotions/update" method="post" id="promotion" enctype="multipart/form-data">
+<form action="/admin/day/promotions/update" method="post" id="promotion" enctype="multipart/form-data">
 	<p>
 		<label>Product:</label><br />
 		<input type="text" name="promotion[productname]" id="blog" value="<%= @promotion.productname %>"/>
@@ -19,3 +20,4 @@
 		<input type="submit">
 	</p>
 </form>
+</div>
