@@ -1,4 +1,4 @@
-<p>
+<div class="container"><p>
   <b>Day ID:</b>
   <%= @day.id %>
 </p>
@@ -19,7 +19,7 @@
 <a href="/admin/day/promotions/new/<%= @day.id %>">Create New Promotion</a>
 
 
-<table border="0" cellpartding="0" cellspacing="10" class="list">
+<table class="table" border="0" cellpartding="0" cellspacing="10" class="list">
 	<h2>Product List</h2>
 <% @day.products.each_with_index do |group,i| %>
 	<tr<%= ' class="alt"' if i%2==0 %>>
@@ -35,7 +35,7 @@
 </table>
 
 
-<table border="0" cellpartding="0" cellspacing="10" class="list">
+<table class="table" border="0" cellpartding="0" cellspacing="10" class="list">
 	<h2>Promotions List</h2>
 <% @day.promotions.each_with_index do |group,i| %>
 	<tr<%= ' class="alt"' if i%2==0 %>>
@@ -48,3 +48,4 @@
 <% end %>
 </table>
 
+</div>
