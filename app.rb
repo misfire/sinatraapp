@@ -226,7 +226,7 @@ get '/admin/day/promotions/show/:dayid/:id' do
   @day = Group.get(params[:dayid])
   @promotion = @day.promotions.get(params[:id])
   if @promotion
-  erb :"admin/products/#{page}"
+  erb :"admin/promotions/#{page}"
   else
     redirect('/admin')
   end
@@ -246,6 +246,17 @@ post '/admin/day/promotions/create/:dayid' do
     redirect "/admin/day/show/#{day.id}"
   else
     redirect "/admin"
+  end
+end
+
+get '/admin/day/promotions/edit/:dayid/:id' do
+  page = params[:p] || 'edit'
+  @day = Group.get(params[:dayid])
+  @promotion = @day.promotions.get(params[:id])
+  if @promotion
+  erb :"admin/promotions/#{page}"
+  else
+    redirect('/admin')
   end
 end
 
