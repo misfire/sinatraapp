@@ -15,12 +15,12 @@
 	  <%= if group.is_active == true %>
 	  <td><span class="label label-success">Active</span></td>
 
-	  <%= end %>
+	  <% end %>
 
 	  <%= if group.is_active == false %>
 	  <td><span class="label">Disabled</span></td>
 
-	  <%= end %>
+	  <% end %>
 
 	  <td><a class="btn" href="/admin/day/edit/<%= group.id %>">Edit</a><a class="btn btn-danger" href="/admin/day/delete/<%= group.id %>">Delete</a></td>
 	</tr>	
