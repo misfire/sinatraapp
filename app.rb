@@ -241,7 +241,7 @@ end
 
 post '/admin/day/promotions/create/:dayid' do
   day = Group.get(params[:dayid])
-  @promotion = day.promotions.new(params[:product])
+  @promotion = day.promotions.new(params[:promotion])
   if @promotion.save
     redirect "/admin/day/show/#{day.id}"
   else
