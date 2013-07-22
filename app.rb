@@ -270,6 +270,16 @@ post '/admin/day/promotions/update' do
   end  
 end
 
+get '/admin/day/promotions/delete/:dayid/:id' do
+  page = :dayid
+  day = Group.get(params[:dayid])
+  promotion = day.promotions.get(params[:id])
+  unless promotion.nil?
+    promotion.destroy
+  end
+  redirect "/admin/day/show/#{day.id}"
+end
+
 get '/vote' do
 "this a vote page"
 end
