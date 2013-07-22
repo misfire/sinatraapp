@@ -221,7 +221,7 @@ get '/admin/day/products/vote/:dayid/:id' do
   end
 end
 
-get '/admin/day/products/show/:dayid/:id' do
+get '/admin/day/promotions/show/:dayid/:id' do
   page = params[:p] || 'show'
   @day = Group.get(params[:dayid])
   @promotion = @day.promotions.get(params[:id])
@@ -229,6 +229,23 @@ get '/admin/day/products/show/:dayid/:id' do
   erb :"admin/products/#{page}"
   else
     redirect('/admin')
+  end
+end
+
+get '/admin/day/promotions/new/:dayid' do
+  page = params[:p] || 'new'
+  @day = Group.get(params[:dayid])
+  @title = "Create new promotion"
+  erb :"admin/promotions/#{page}"
+end
+
+post '/admin/day/promotions/create/:dayid' do
+  day = Group.get(params[:dayid])
+  @promotion = day.promotions.new(params[:product])
+  if @promotion.save
+    redirect "/admin/day/show/#{day.id}"
+  else
+    redirect "/admin"
   end
 end
 
