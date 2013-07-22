@@ -264,7 +264,7 @@ post '/admin/day/promotions/update' do
   @day = Group.get(params[:dayid])
   @promotion = @day.promotions.get(params[:id])
   if @promotion.update(params[:promotion])
-    redirect "/admin/day/products/show/#{@day.id}/#{@promotion.id}"
+    redirect "/admin/day/promotions/show/#{@day.id}/#{@promotion.id}"
   else 
     redirect('/admin')
   end  
