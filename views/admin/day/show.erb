@@ -27,13 +27,15 @@
 	  	<td><span class="label">Picture: </span></span><%= group.picture %></span>
 	  <td><a href="/admin/day/products/edit/<%= @day.id %>/<%= group.id %>">edit</a></td>
 	  <td><a href="/admin/day/products/delete/<%= @day.id %>/<%= group.id %>">delete</a></td>
+	  <td><a href="/admin/day/products/delete/<%= @day.id %>/<%= group.id %>">votes</a></td>
+	  <span class="label">Votes: </span></span><%= group.votes %></span>
 	</tr>	
 <% end %>
 </table>
 
 
 <table border="0" cellpartding="0" cellspacing="10" class="list">
-	<h2>Promo List</h2>
+	<h2>Promotions List</h2>
 <% @day.promotions.each_with_index do |group,i| %>
 	<tr<%= ' class="alt"' if i%2==0 %>>
 	  <td><a href="/admin/day/products/show/<%= @day.id %>/<%= group.id %>"><%= group.productname %></a></td>
