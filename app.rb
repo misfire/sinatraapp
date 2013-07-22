@@ -77,7 +77,7 @@ DataMapper.auto_upgrade!
 
 
 get '/' do
-  page = params[:p] || 'check'
+  page = params[:p] || 'index'
   erb :"#{page}"
 end
 
