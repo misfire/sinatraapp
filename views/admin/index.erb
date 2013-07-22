@@ -13,8 +13,8 @@
 <% @groups.each_with_index do |group,i| %>
 	<tr<%= ' class="alt"' if i%2==0 %>>
 	  <td><a href="/admin/day/show/<%= group.id %>"><%= group.name %></a></td>
-	  <td><span class="label">Is Active?:</span></span><%= group.is_active %></span>
-	  <td><a href="/admin/day/edit/<%= group.id %>">edit</a><a href="/admin/day/delete/<%= group.id %>">delete</a></td>
+	  <td><span><%= group.is_active %></span>
+	  <td><a class="btn" href="/admin/day/edit/<%= group.id %>">edit</a><a class="btn" href="/admin/day/delete/<%= group.id %>">delete</a></td>
 	</tr>	
 <% end %>
 </table>
