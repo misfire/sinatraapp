@@ -260,6 +260,16 @@ get '/admin/day/promotions/edit/:dayid/:id' do
   end
 end
 
+post '/admin/day/promotions/update' do
+  @day = Group.get(params[:dayid])
+  @promotion = @day.promotions.get(params[:id])
+  if @promotion.update(params[:promotion])
+    redirect "/admin/day/products/show/#{@day.id}/#{@promotion.id}"
+  else 
+    redirect('/admin')
+  end  
+end
+
 get '/vote' do
 "this a vote page"
 end
