@@ -27,8 +27,7 @@
 	  	<td><span class="label">Picture: </span></span><%= group.picture %></span>
 	  <td><a href="/admin/day/products/edit/<%= @day.id %>/<%= group.id %>">edit</a></td>
 	  <td><a href="/admin/day/products/delete/<%= @day.id %>/<%= group.id %>">delete</a></td>
-	  <td><a href="/admin/day/products/delete/<%= @day.id %>/<%= group.id %>">votes: </a></td>
-	  <td><%= group.votes %></td>
+	  <td><a href="">Votes</a><%= group.votes %></td>
 	</tr>	
 <% end %>
 </table>
