@@ -210,6 +210,16 @@ get '/admin/day/products/delete/:dayid/:id' do
   redirect "/admin/day/show/#{day.id}"
 end
 
+post '/admin/day/products/vote/:dayid/:id' do
+  day = Group.get(params[:dayid])
+  @product = day.products.get(params[:id])
+  @vote = @products.votes.new(:email => 'aznlucidx@gmail.com', :ip_address => '192.168.0.1', :subscribed => 'true', :username => 'misfire')
+  if @vote.save
+    redirect "/admin/day/show/#{day.id}"
+  else
+    redirect "/admin"
+  end
+end
 
 get '/vote' do
 "this a vote page"
