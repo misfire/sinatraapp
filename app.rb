@@ -95,7 +95,7 @@ end
 get '/admin' do
   page = params[:p] || 'index'
   @groups = Group.all(:order => [:id.asc])
-  erb :"admin/#{page}"
+  erb :"admin/#{page}", layout: => :admin
 end
 
 get '/admin/day/new' do
