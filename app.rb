@@ -101,7 +101,7 @@ end
 get '/admin/day/new' do
   page = params[:p] || 'new'
   @title = "Create new Day"
-  erb :"admin/day/#{page}"
+  erb :"admin/day/#{page}", :layout => :admin
 end
 
 post '/admin/day/create' do
@@ -117,7 +117,7 @@ get '/admin/day/show/:id' do
   page = params[:p] || 'show'
   @day = Group.get(params[:id])
   if @day
-  erb :"admin/day/#{page}"
+  erb :"admin/day/#{page}", :layout => :admin
   else
     redirect('/admin')
   end
@@ -135,7 +135,7 @@ get '/admin/day/edit/:id' do
   page = params[:p] || 'edit'
   @day = Group.get(params[:id])
   if @day
-    erb :"admin/day/#{page}"
+    erb :"admin/day/#{page}", :layout => :admin
   else
     redirect('/admin')
   end  
@@ -155,7 +155,7 @@ get '/admin/day/products/new/:dayid' do
   page = params[:p] || 'new'
   @day = Group.get(params[:dayid])
   @title = "Create new product"
-  erb :"admin/products/#{page}"
+  erb :"admin/products/#{page}", :layout => :admin
 end
 
 post '/admin/day/products/create/:dayid' do
@@ -173,7 +173,7 @@ get '/admin/day/products/show/:dayid/:id' do
   @day = Group.get(params[:dayid])
   @product = @day.products.get(params[:id])
   if @product
-  erb :"admin/products/#{page}"
+  erb :"admin/products/#{page}", :layout => :admin
   else
     redirect('/admin')
   end
@@ -184,7 +184,7 @@ get '/admin/day/products/edit/:dayid/:id' do
   @day = Group.get(params[:dayid])
   @product = @day.products.get(params[:id])
   if @product
-  erb :"admin/products/#{page}"
+  erb :"admin/products/#{page}", :layout => :admin
   else
     redirect('/admin')
   end
@@ -226,7 +226,7 @@ get '/admin/day/promotions/show/:dayid/:id' do
   @day = Group.get(params[:dayid])
   @promotion = @day.promotions.get(params[:id])
   if @promotion
-  erb :"admin/promotions/#{page}"
+  erb :"admin/promotions/#{page}", :layout => :admin
   else
     redirect('/admin')
   end
@@ -236,7 +236,7 @@ get '/admin/day/promotions/new/:dayid' do
   page = params[:p] || 'new'
   @day = Group.get(params[:dayid])
   @title = "Create new promotion"
-  erb :"admin/promotions/#{page}"
+  erb :"admin/promotions/#{page}", :layout => :admin
 end
 
 post '/admin/day/promotions/create/:dayid' do
@@ -254,7 +254,7 @@ get '/admin/day/promotions/edit/:dayid/:id' do
   @day = Group.get(params[:dayid])
   @promotion = @day.promotions.get(params[:id])
   if @promotion
-  erb :"admin/promotions/#{page}"
+  erb :"admin/promotions/#{page}", :layout => :admin
   else
     redirect('/admin')
   end
@@ -284,7 +284,7 @@ get '/admin/day/votes/show/:dayid/:id' do
   @day = Group.get(params[:dayid])
   product = @day.products.get(params[:id])
   @votes = product.votes.all
-  erb :"admin/votes/show"
+  erb :"admin/votes/show", :layout => :admin
 end
 
 get '/vote' do
