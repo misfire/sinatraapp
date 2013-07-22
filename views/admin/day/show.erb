@@ -49,8 +49,6 @@
 		<th>Description</th>
 		<th>Picture</th>
 		<th>Actions</th>
-		<th>Votes</th>
-		<th>Debug</th>
 	</tr>		
 <% @day.promotions.each_with_index do |group,i| %>
 	<tr<%= ' class="alt"' if i%2==0 %>>
@@ -58,8 +56,6 @@
 	  <td><%= group.description %></td>		
 	  	<td><%= group.picture %></td>
 	  <td><a class="btn" href="/admin/day/promotions/edit/<%= @day.id %>/<%= group.id %>">Edit</a><a onclick="return confirm('Are you sure you want to delete?');" class="btn btn-danger" href="/admin/day/promotions/delete/<%= @day.id %>/<%= group.id %>">Delete</a></td>
-	  <td><a href="#">N/A</a></td>
-	  <td><a href="#">N/A</a></td>
 	</tr>	
 <% end %>
 </table>
