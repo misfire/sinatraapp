@@ -51,6 +51,7 @@
 		<th>Actions</th>
 		<th>Votes</th>
 		<th>Debug</th>
+	</tr>
 <% @day.promotions.each_with_index do |group,i| %>
 	<tr<%= ' class="alt"' if i%2==0 %>>
 	  <td><a href="/admin/day/promotions/show/<%= @day.id %>/<%= group.id %>"><%= group.productname %></a></td>
