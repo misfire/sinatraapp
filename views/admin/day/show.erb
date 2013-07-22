@@ -34,7 +34,7 @@
 	  <td><a href="/admin/day/products/show/<%= @day.id %>/<%= group.id %>"><%= group.productname %></a></td>
 	  <td><%= group.description %></span>
 	  	<td><%= group.picture %></span>
-	  <td><a class="btn" href="/admin/day/products/edit/<%= @day.id %>/<%= group.id %>">Edit</a><a class="btn btn-danger" href="/admin/day/products/delete/<%= @day.id %>/<%= group.id %>">Delete</a></td>
+	  <td><a class="btn" href="/admin/day/products/edit/<%= @day.id %>/<%= group.id %>">Edit</a><a onclick="return confirm('Are you sure you want to delete?');" class="btn btn-danger" href="/admin/day/products/delete/<%= @day.id %>/<%= group.id %>">Delete</a></td>
 	  <td><a href="/admin/day/votes/show/<%= @day.id %>/<%= group.id %>"><%= group.votes.count %></a></td>
 	  <td><a href="/admin/day/products/vote/<%= @day.id %>/<%= group.id %>">Vote This!</a></td>
 	</tr>	
@@ -42,7 +42,7 @@
 </table>
 
 
-<table class="table" border="0" cellpartding="0" cellspacing="5" class="list">
+<table class="table" border="0" cellpartding="0" cellspacing="10" class="list">
 	<h2>Promotions</h2>
 	<tr>
 		<th>Promotion</th>
@@ -56,7 +56,7 @@
 	  <td><a href="/admin/day/promotions/show/<%= @day.id %>/<%= group.id %>"><%= group.productname %></a></td>
 	  <td><%= group.description %></span>
 	  	<td><%= group.picture %></span>
-	  <td><a class="btn" href="/admin/day/promotions/edit/<%= @day.id %>/<%= group.id %>">Edit</a><a class="btn btn-danger" href="/admin/day/promotions/delete/<%= @day.id %>/<%= group.id %>">Delete</a></td>
+	  <td><a class="btn" href="/admin/day/promotions/edit/<%= @day.id %>/<%= group.id %>">Edit</a><a onclick="return confirm('Are you sure you want to delete?');" class="btn btn-danger" href="/admin/day/promotions/delete/<%= @day.id %>/<%= group.id %>">Delete</a></td>
 	  <td></td>
 	  <td></td>
 	</tr>	
