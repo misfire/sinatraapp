@@ -14,7 +14,7 @@
 	<tr<%= ' class="alt"' if i%2==0 %>>
 	  <td><a href="/admin/day/show/<%= group.id %>"><%= group.name %></a></td>
 	  <td><span><%= group.is_active %></span>
-	  <td><a class="btn" href="/admin/day/edit/<%= group.id %>">edit</a><a class="btn" href="/admin/day/delete/<%= group.id %>">delete</a></td>
+	  <td><a class="btn" href="/admin/day/edit/<%= group.id %>">Edit</a><a class="btn btn-danger" href="/admin/day/delete/<%= group.id %>">Delete</a></td>
 	</tr>	
 <% end %>
 </table>
