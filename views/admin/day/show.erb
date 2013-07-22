@@ -21,11 +21,18 @@
 
 <table class="table" border="0" cellpartding="0" cellspacing="10" class="list">
 	<h2>Product List</h2>
+	<tr>
+	<th>Product</th>
+	<th>Description</th>
+	<th>Picture</th>
+	<th>Actions</th>
+	<th>Votes</th>
+	</tr>
 <% @day.products.each_with_index do |group,i| %>
 	<tr<%= ' class="alt"' if i%2==0 %>>
 	  <td><a href="/admin/day/products/show/<%= @day.id %>/<%= group.id %>"><%= group.productname %></a></td>
-	  <td><span class="label">Description: </span></span><%= group.description %></span>
-	  	<td><span class="label">Picture: </span></span><%= group.picture %></span>
+	  <td><span class="label">Description: </span><%= group.description %></span>
+	  	<td><span class="label">Picture: </span><%= group.picture %></span>
 	  <td><a href="/admin/day/products/edit/<%= @day.id %>/<%= group.id %>">edit</a></td>
 	  <td><a href="/admin/day/products/delete/<%= @day.id %>/<%= group.id %>">delete</a></td>
 	  <td>Votes: <a href="/admin/day/votes/show/<%= @day.id %>/<%= group.id %>"><%= group.votes.count %></a></td>
