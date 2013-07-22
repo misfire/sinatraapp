@@ -15,8 +15,8 @@
   <%= @day.promo_code %>
 </p>
 
-<a href="/admin/day/products/new/<%= @day.id %>">Create New Product</a>
-<a href="/admin/day/promotions/new/<%= @day.id %>">Create New Promotion</a>
+<a class="btn" href="/admin/day/products/new/<%= @day.id %>">Create New Product</a>
+<a class="btn" href="/admin/day/promotions/new/<%= @day.id %>">Create New Promotion</a>
 
 
 <table class="table" border="0" cellpartding="0" cellspacing="10" class="list">
@@ -34,7 +34,7 @@
 	  <td><a href="/admin/day/products/show/<%= @day.id %>/<%= group.id %>"><%= group.productname %></a></td>
 	  <td><%= group.description %></span>
 	  	<td><%= group.picture %></span>
-	  <td><a class="btn" href="/admin/day/products/edit/<%= @day.id %>/<%= group.id %>">edit</a><a class="btn btn-danger" href="/admin/day/products/delete/<%= @day.id %>/<%= group.id %>">delete</a></td>
+	  <td><a class="btn" href="/admin/day/products/edit/<%= @day.id %>/<%= group.id %>">Edit</a><a class="btn btn-danger" href="/admin/day/products/delete/<%= @day.id %>/<%= group.id %>">Delete</a></td>
 	  <td><a href="/admin/day/votes/show/<%= @day.id %>/<%= group.id %>"><%= group.votes.count %></a></td>
 	  <td><a href="/admin/day/products/vote/<%= @day.id %>/<%= group.id %>">Vote This!</a></td>
 	</tr>	
