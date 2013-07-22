@@ -32,8 +32,8 @@
 <% @day.products.each_with_index do |group,i| %>
 	<tr<%= ' class="alt"' if i%2==0 %>>
 	  <td><a href="/admin/day/products/show/<%= @day.id %>/<%= group.id %>"><%= group.productname %></a></td>
-	  <td><%= group.description %></span>
-	  	<td><%= group.picture %></span>
+	  <td><%= group.description %></td>
+	  	<td><%= group.picture %></td>
 	  <td><a class="btn" href="/admin/day/products/edit/<%= @day.id %>/<%= group.id %>">Edit</a><a onclick="return confirm('Are you sure you want to delete?');" class="btn btn-danger" href="/admin/day/products/delete/<%= @day.id %>/<%= group.id %>">Delete</a></td>
 	  <td><a href="/admin/day/votes/show/<%= @day.id %>/<%= group.id %>"><%= group.votes.count %></a></td>
 	  <td><a href="/admin/day/products/vote/<%= @day.id %>/<%= group.id %>">Vote This!</a></td>
@@ -55,8 +55,8 @@
 <% @day.promotions.each_with_index do |group,i| %>
 	<tr<%= ' class="alt"' if i%2==0 %>>
 	  <td><a href="/admin/day/promotions/show/<%= @day.id %>/<%= group.id %>"><%= group.productname %></a></td>
-	  <td><%= group.description %></span>
-	  	<td><%= group.picture %></span>
+	  <td><%= group.description %></td>
+	  	<td><%= group.picture %></td>
 	  <td><a class="btn" href="/admin/day/promotions/edit/<%= @day.id %>/<%= group.id %>">Edit</a><a onclick="return confirm('Are you sure you want to delete?');" class="btn btn-danger" href="/admin/day/promotions/delete/<%= @day.id %>/<%= group.id %>">Delete</a></td>
 	  <td><a href="#">N/A</a></td>
 	  <td><a href="#">N/A</a></td>
