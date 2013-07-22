@@ -2,8 +2,6 @@
 
 <h2>Admin</h3>
 
-<h3>Days</h3>
-
 <table class="table" border="0" cellpartding="0" cellspacing="10" class="list">
 	<tr>
 	<th>Day</th>
@@ -13,7 +11,17 @@
 <% @groups.each_with_index do |group,i| %>
 	<tr<%= ' class="alt"' if i%2==0 %>>
 	  <td><a href="/admin/day/show/<%= group.id %>"><%= group.name %></a></td>
-	  <td><span><%= group.is_active %></span>
+
+	  <%= if group.is_active == true %>
+	  <td><span class="label label-success">Active</span></td>
+
+	  <%= end %>
+
+	  <%= if group.is_active == false %>
+	  <td><span class="label">Disabled</span></td>
+
+	  <%= end %>
+
 	  <td><a class="btn" href="/admin/day/edit/<%= group.id %>">Edit</a><a class="btn btn-danger" href="/admin/day/delete/<%= group.id %>">Delete</a></td>
 	</tr>	
 <% end %>
