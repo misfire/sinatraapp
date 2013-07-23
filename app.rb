@@ -37,7 +37,7 @@ class Product
   property  :updated_at,    DateTime,  :required => false
 
   belongs_to :group
-  has n, :votes
+  has n, :votes, :constraint => :destroy
 
 end
 
