@@ -10,12 +10,12 @@
 	<p>
 		<label>Activated:</label><br />
 		<select name="day[is_active]" id="is_active" id="blogger" value="<%= @day.is_active %>">
-	<% if @day.is_active = true %> 
+	<% if @day.is_active == true %> 
   <option selected="selected">true</option>
   <option>false</option>
   <% end %>
 
-  <% if @day.is_active = false %> 
+  <% if @day.is_active == false %> 
   <option>true</option>
   <option selected="selected">false</option>
   <% end %>
