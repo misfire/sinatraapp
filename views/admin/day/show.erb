@@ -50,7 +50,7 @@
 				<div id="edit<%= group.id %>" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel" aria-hidden="true">
 				<div class="modal-header">
 					<a href="#" class="close" data-dismiss="modal">&times;</a>
-					<h3>Please enter a new title for this window.</h3>
+					<h3>Edit Product</h3>
 					</div>
 				<div class="modal-body">
 					<div class="divDialogElements">
@@ -60,11 +60,11 @@
 		<input type="text" name="product[productname]" id="blog" value="<%= group.productname %>"/>
 	</p>
 	<p>
-		<label>Description?:</label><br />
+		<label>Description:</label><br />
 		<input type="text" name="product[description]" id="blogger" value="<%= group.description %>"/>
 	</p>
 	<p>
-		<label>Promo Code:</label><br />
+		<label>Picture:</label><br />
 		<input type="text" name="product[picture]" id="title" value="<%= group.picture %>"/>
 	</p>
 	<input type="hidden" name="id" value="<%= group.id %>">
