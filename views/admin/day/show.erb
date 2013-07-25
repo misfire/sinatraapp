@@ -56,15 +56,15 @@
 					<div class="divDialogElements">
 					<form	action="/admin/day/products/update" method="post" id="product" enctype="multipart/form-data">
 	<p>
-		<label>Product:</label><br />
+		<h3>>Product:</h3><br />
 		<input type="text" name="product[productname]" id="blog" value="<%= group.productname %>"/>
 	</p>
 	<p>
-		<label>Description:</label><br />
+		<h3>Description:</h3><br />
 		<input type="text" name="product[description]" id="blogger" value="<%= group.description %>"/>
 	</p>
 	<p>
-		<label>Picture:</label><br />
+		<h3>Picture:</h3><br />
 		<input type="text" name="product[picture]" id="title" value="<%= group.picture %>"/>
 	</p>
 	<input type="hidden" name="id" value="<%= group.id %>">
@@ -130,15 +130,15 @@
 					<div class="divDialogElements">
 						<form action="/admin/day/promotions/update" method="post" id="promotion" enctype="multipart/form-data">
 	<p>
-		<label>Product:</label><br />
+		<h3>Product:</h3><br />
 		<input type="text" name="promotion[productname]" id="blog" value="<%= group.productname %>"/>
 	</p>
 	<p>
-		<label>Description?:</label><br />
+		<h3>Description:</h3><br />
 		<input type="text" name="promotion[description]" id="blogger" value="<%= group.description %>"/>
 	</p>
 	<p>
-		<label>Picture:</label><br />
+		<h3>Picture:</h3><br />
 		<input type="text" name="promotion[picture]" id="title" value="<%= group.picture %>"/>
 	</p>
 	<input type="hidden" name="id" value="<%= group.id %>">
