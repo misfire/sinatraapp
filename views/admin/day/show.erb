@@ -128,14 +128,30 @@
 					</div>
 				<div class="modal-body">
 					<div class="divDialogElements">
-						<h3>Name:</h3><%= group.productname %>
-					 	<h3>Description:</h3><%= group.description %>
-	  					<h3>Picture:</h3><%= group.picture %>
+						<form action="/admin/day/promotions/update" method="post" id="promotion" enctype="multipart/form-data">
+	<p>
+		<label>Product:</label><br />
+		<input type="text" name="promotion[productname]" id="blog" value="<%= @promotion.productname %>"/>
+	</p>
+	<p>
+		<label>Description?:</label><br />
+		<input type="text" name="promotion[description]" id="blogger" value="<%= @promotion.description %>"/>
+	</p>
+	<p>
+		<label>Picture:</label><br />
+		<input type="text" name="promotion[picture]" id="title" value="<%= @promotion.picture %>"/>
+	</p>
+	<input type="hidden" name="id" value="<%= @promotion.id %>">
+	<input type="hidden" name="dayid" value="<%= @day.id %>">
+	<p>
+	</p>
+
 						</div>
 					</div>
 				<div class="modal-footer">
 					<a href="#" class="btn" onclick="closeDialog ();">Cancel</a>
-					<a href="#" class="btn btn-primary" onclick="okClicked ();">OK</a>
+					<input type="submit" href="#" class="btn btn-primary" onclick="okClicked ();">OK>
+					</form>
 					</div>
 				</div>
 	<tr<%= ' class="alt"' if i%2==0 %>>
