@@ -30,6 +30,24 @@
 	<th>Debug</th>
 	</tr>
 <% @day.products.each_with_index do |group,i| %>
+<div id="windowTitleDialog" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel" aria-hidden="true">
+				<div class="modal-header">
+					<a href="#" class="close" data-dismiss="modal">&times;</a>
+					<h3>Please enter a new title for this window.</h3>
+					</div>
+				<div class="modal-body">
+					<div class="divDialogElements">
+						<input class="xlarge" id="xlInput" name="xlInput" type="text" />
+						</div>
+					</div>
+				<div class="modal-footer">
+					<a href="#" class="btn" onclick="closeDialog ();">Cancel</a>
+					<a href="#" class="btn btn-primary" onclick="okClicked ();">OK</a>
+					</div>
+				</div>
+	<div class="divButtons">
+				<a data-toggle="modal" href="#windowTitleDialog" class="btn btn-primary btn-large">Set Window Title</a>
+				</div>
 	<tr<%= ' class="alt"' if i%2==0 %>>
 	  <td><a href="/admin/day/products/show/<%= @day.id %>/<%= group.id %>"><%= group.productname %></a></td>
 	  <td><%= group.description %></td>
@@ -61,25 +79,6 @@
 </table>
 
 </div>
-
-<div id="windowTitleDialog" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="windowTitleLabel" aria-hidden="true">
-				<div class="modal-header">
-					<a href="#" class="close" data-dismiss="modal">&times;</a>
-					<h3>Please enter a new title for this window.</h3>
-					</div>
-				<div class="modal-body">
-					<div class="divDialogElements">
-						<input class="xlarge" id="xlInput" name="xlInput" type="text" />
-						</div>
-					</div>
-				<div class="modal-footer">
-					<a href="#" class="btn" onclick="closeDialog ();">Cancel</a>
-					<a href="#" class="btn btn-primary" onclick="okClicked ();">OK</a>
-					</div>
-				</div>
-	<div class="divButtons">
-				<a data-toggle="modal" href="#windowTitleDialog" class="btn btn-primary btn-large">Set Window Title</a>
-				</div>
 
 <script>
 			$(document).ready(function() {
