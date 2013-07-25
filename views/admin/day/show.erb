@@ -69,30 +69,23 @@
 	</p>
 	<input type="hidden" name="id" value="<%= group.id %>">
 	<input type="hidden" name="dayid" value="<%= @day.id %>">
-	<p>
-		<input type="submit">
-	</p>
 
 						</div>
 					</div>
 				<div class="modal-footer">
 					<a href="#" class="btn" onclick="closeDialog ();">Cancel</a>
-					<input type ="submit" class="btn btn-primary" onclick="okClicked ();">OK</a>
+					<input type ="submit" class="btn btn-primary" onclick="okClicked ();"></a>
 
 					</div>
 					</form>
 				</div>
-			<div class="divButtons">
-				<a data-toggle="modal" href="#edit<%= group.id %>" class="btn btn-primary btn-large">Set Window Title</a>
-				</div>
-			<p>Note -- See <a href="http://bootstrapdemos.scripting.com/">this page</a> for a list of my Bootstrap demos.</p>
 			</div>
 	<div class="divButtons">		
 	<tr<%= ' class="alt"' if i%2==0 %>>
 	  <td><a data-toggle="modal" href="#<%= group.id %>"><%= group.productname %></a></td>
 	  <td><%= group.description %></td>
 	  	<td><%= group.picture %></td>
-	  <td><a class="btn" href="/admin/day/products/edit/<%= @day.id %>/<%= group.id %>">Edit</a><a onclick="return confirm('Are you sure you want to delete?');" class="btn btn-danger" href="/admin/day/products/delete/<%= @day.id %>/<%= group.id %>">Delete</a></td>
+	  <td><a class="btn" data-toggle="modal" href="#edit<%= group.id %>">Edit</a><a onclick="return confirm('Are you sure you want to delete?');" class="btn btn-danger" href="/admin/day/products/delete/<%= @day.id %>/<%= group.id %>">Delete</a></td>
 	  <td><a href="/admin/day/votes/show/<%= @day.id %>/<%= group.id %>"><%= group.votes.count %></a></td>
 	  <td><a href="/admin/day/products/vote/<%= @day.id %>/<%= group.id %>">Vote This!</a></td>
 	</tr>	
