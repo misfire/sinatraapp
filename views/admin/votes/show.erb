@@ -3,7 +3,7 @@
 	<h2>Votes List for Product: <%= @product.productname %></h2>
 <% @votes.each_with_index do |group,i| %>
 	<tr<%= ' class="alt"' if i%2==0 %>>
-	  <td><a href="/admin/day/products/show/<%= @day.id %>/<%= group.id %>"><%= group.email %></a></td>
+	  <td><a href=""><%= group.email %></a></td>
 	  <td><%= group.ip_address %></dd>
 	  	<td><%= group.subscribed %></td>
 	  	<td><%= group.username %></td>
