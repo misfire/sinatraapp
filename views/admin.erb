@@ -46,5 +46,21 @@
 
 <!-- Bootstrap jQuery Plugins, compiled and minified -->
 <script src="/js/bootstrap.min.js"></script>
+<script>
+            $(document).ready(function() {
+                $('#windowTitleDialog').bind('show', function () {
+                    document.getElementById ("xlInput").value = document.title;
+                    });
+                });
+            function closeDialog () {
+                $('.modal').modal('hide'); 
+                };
+            function okClicked () {
+                closeDialog ();
+                };
+
+                
+ 
+</script>
 </body>
 </html>
