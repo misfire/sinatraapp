@@ -117,6 +117,15 @@ body {
     top:756px;
 }
 
+#votedimage8{
+
+	z-index:100;
+    position:absolute;    
+    font-size: 12px;
+    left:250px;
+    top:756px;
+}
+
 
 
 #submitimage
