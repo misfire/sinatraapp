@@ -63,6 +63,33 @@ body {
     top:520px;
 }
 
+#vote1{
+
+	z-index:100;
+    position:absolute;    
+    font-size: 12px;
+    left:0px;
+    top:520px;
+}
+
+#vote2{
+
+	z-index:100;
+    position:absolute;    
+    font-size: 12px;
+    left:320px;
+    top:520px;
+}
+
+#vote3{
+
+	z-index:100;
+    position:absolute;    
+    font-size: 12px;
+    left:620px;
+    top:520px;
+}
+
 #submitimage
 {
 
