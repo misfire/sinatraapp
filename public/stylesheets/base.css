@@ -140,8 +140,17 @@ body {
 	z-index:100;
     position:absolute;    
     font-size: 12px;
-    left:425px;
+    left:423px;
     top:756px;
+}
+
+#votedimage11{
+
+	z-index:100;
+    position:absolute;    
+    font-size: 12px;
+    left:423px;
+    top:856px;
 }
 
 
