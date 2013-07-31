@@ -23,6 +23,6 @@ body {
     top:520px;
 }
 
-#submitimage.rollover{
+#submitimage:hover {
 	background: url("assets/submit_hover.jpg");
 }
