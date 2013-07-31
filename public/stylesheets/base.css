@@ -5,14 +5,22 @@ body {
 
 .container{
 	position: relative;
-	width: 100%;
 }
 
-.emailsubmit{
+#image
+{    
+    position:absolute;
+    left:0;
+    top:0;
+}
 
-	position: absolute; 
-   top: 200px; 
-   left: 500px; 
-   width: 100%;
-   z-index: 100;
+#email{
+
+	z-index:100;
+    position:absolute;    
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+    left:150px;
+    top:350px;
 }
