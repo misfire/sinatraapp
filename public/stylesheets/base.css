@@ -59,7 +59,7 @@ body {
 	z-index:100;
     position:absolute;    
     font-size: 12px;
-    left:94px;
+    left:320px;
     top:520px;
 }
 
@@ -68,7 +68,7 @@ body {
 	z-index:100;
     position:absolute;    
     font-size: 12px;
-    left:0px;
+    left:94px;
     top:988px;
 }
 
@@ -78,7 +78,7 @@ body {
     position:absolute;    
     font-size: 12px;
     left:361px;
-    top:987px;
+    top:988px;
 }
 
 #vote3{
@@ -87,7 +87,7 @@ body {
     position:absolute;    
     font-size: 12px;
     left:626px;
-    top:987px;
+    top:988px;
 }
 
 #submitimage
