@@ -35,7 +35,7 @@ body {
     position:absolute;
     left:550px;
     top:332px;
-    z-index:15;
+    z-index:20;
 }
 
 #image4
@@ -43,8 +43,16 @@ body {
     position:absolute;
     left:0px;
     top:883px;
-    z-index:15;
+    z-index:25;
 }
+#image5
+{    
+    position:absolute;
+    left:0px;
+    top:1035px;
+    z-index:30;
+}
+
 
 #email{
 
