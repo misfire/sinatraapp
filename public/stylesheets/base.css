@@ -108,6 +108,16 @@ body {
     top:727px;
 }
 
+#votedimage7{
+
+	z-index:100;
+    position:absolute;    
+    font-size: 12px;
+    left:0px;
+    top:757px;
+}
+
+
 
 #submitimage
 {
