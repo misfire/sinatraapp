@@ -2,3 +2,16 @@ body {
 	width: 800px;
 	margin: 0 auto;
 }
+
+.container{
+	position: relative;
+	width: 100%;
+}
+
+.emailsubmit{
+
+	position: absolute; 
+   top: 200px; 
+   left: 0; 
+   width: 100%;
+}
