@@ -99,6 +99,15 @@ body {
     top:366px;
 }
 
+#votedimage6{
+
+	z-index:100;
+    position:absolute;    
+    font-size: 12px;
+    left:346px;
+    top:466px;
+}
+
 
 #submitimage
 {
