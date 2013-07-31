@@ -49,10 +49,9 @@ body {
 
 #submitimage
 {
-background: url("assets/submit_hover.jpg");
 
 }
 
 #submitimage:hover {
-	background: url("assets/submit_hover.jpg");
+	background: url("/assets/submit_hover.jpg");
 }
