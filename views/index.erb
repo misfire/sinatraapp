@@ -12,15 +12,11 @@ You havn't liked the page YET LIKE IT BUDDY
 <img id="image" src="assets/0150_7for7_1_03.jpg" />
 <form action="/admin/day/create" method="post" id="email" enctype="multipart/form-data">
 	<p>
-		<label>Enter Email Address:</label><br />
-		<input type="text" />	
+		<input type="text" value="Enter Email Address.."/>	
 	</p>
 	<p>
 		<label>Terms Conditions:</label><br />
-			<select name="day[is_active]" id="is_active">
-  <option>true</option>
-  <option>false</option>
-</select>
+			<input type="checkbox" name="day[is_active]" id="is_active">
 	</p>
 	<p>
 		<label>News Letter:</label><br />
