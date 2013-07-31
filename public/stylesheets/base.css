@@ -23,6 +23,12 @@ body {
     top:520px;
 }
 
+#submitimage
+{
+background: url("assets/submit_hover.jpg");
+	
+}
+
 #submitimage:hover {
 	background: url("assets/submit_hover.jpg");
 }
