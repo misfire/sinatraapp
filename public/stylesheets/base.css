@@ -174,6 +174,11 @@ body {
 #submitimage
 {
 
+	z-index:100;
+    position:absolute;    
+    left:345px;
+    top:528px;
+
 }
 
 #submitimage:hover {
