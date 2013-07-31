@@ -38,6 +38,14 @@ body {
     z-index:15;
 }
 
+#image4
+{    
+    position:absolute;
+    left:0px;
+    top:545px;
+    z-index:15;
+}
+
 #email{
 
 	z-index:100;
