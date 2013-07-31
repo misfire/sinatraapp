@@ -90,6 +90,16 @@ body {
     top:988px;
 }
 
+#voteimage5{
+
+	z-index:100;
+    position:absolute;    
+    font-size: 12px;
+    left:904px;
+    top:988px;
+}
+
+
 #submitimage
 {
 
