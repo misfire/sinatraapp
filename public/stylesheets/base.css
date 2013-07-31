@@ -21,6 +21,13 @@ body {
     top:332px;
 }
 
+#image1
+{    
+    position:absolute;
+    left:167px;
+    top:332px;
+}
+
 #email{
 
 	z-index:100;
