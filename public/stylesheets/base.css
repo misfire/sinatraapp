@@ -163,7 +163,13 @@ body {
     top:795px;
 }
 
+#vote1{
 
+	z-index:100;
+    position:absolute;    
+    left:94px;
+    top:688px;
+}
 
 #submitimage
 {
