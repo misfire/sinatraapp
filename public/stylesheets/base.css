@@ -57,7 +57,7 @@ body {
 
 #email{
 
-	z-index:100;
+	z-index:50;
     position:absolute;    
     font-size: 12px;
     left:320px;
@@ -183,6 +183,7 @@ body {
 
 #submitimage:hover {
 	position:absolute;
+	opacity: 1;
 	background: url("../assets/submit_hover.jpg") no-repeat; border: none;
 	width: 97px;
 height: 29px;
