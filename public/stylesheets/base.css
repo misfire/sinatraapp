@@ -182,6 +182,7 @@ body {
 }
 
 #submitimage:hover {
+	position:absolute;
 	background: url("../assets/submit_hover.jpg") no-repeat; border: none;
 	width: 97px;
 height: 29px;
