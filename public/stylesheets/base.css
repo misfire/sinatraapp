@@ -73,7 +73,7 @@ body {
     top:988px;
     	width: 97px;
 height: 29px;
-    background: url("../assets/vote_idle.jpg") no-repeat; border: none;
+    background: url("../assets/voteNow_idle.jpg") no-repeat; border: none;
 }
 
 #vote1:hover {
@@ -81,7 +81,7 @@ height: 29px;
 	opacity:1.0;
 		width: 97px;
 height: 29px;
-	background: url("../assets/vote_hover.jpg") no-repeat; border: none;
+	background: url("../assets/voteNow_hover.jpg") no-repeat; border: none;
 }
 
 #vote2{
@@ -91,7 +91,7 @@ height: 29px;
     font-size: 12px;
     left:361px;
     top:988px;
-    background: url("../assets/vote_idle.jpg") no-repeat; border: none;
+    background: url("../assets/voteNow_idle.jpg") no-repeat; border: none;
 }
 
 #vote3{
@@ -101,7 +101,7 @@ height: 29px;
     font-size: 12px;
     left:626px;
     top:988px;
-    background: url("../assets/vote_idle.jpg") no-repeat; border: none;
+    background: url("../assets/voteNow_idle.jpg") no-repeat; border: none;
 }
 
 #votedimage5{
