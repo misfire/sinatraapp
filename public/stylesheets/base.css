@@ -158,6 +158,7 @@ height: 29px;
     font-size: 12px;
     left:353px;
     top:290px;
+    background: url("../assets/shopNow_idle.jpg") no-repeat; border: none;
 }
 
 #shopnowimage:hover {
