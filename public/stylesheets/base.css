@@ -174,7 +174,7 @@ body {
 #submitimage
 {
 
-	z-index:100;
+	z-index:1;
     position:absolute;    
     left:30px;
     top:138px;
