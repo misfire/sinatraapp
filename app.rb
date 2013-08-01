@@ -9,6 +9,16 @@ set :show_exceptions, true
 # database connection from heroku
 DataMapper.setup(:default, ENV["DATABASE_URL"])
 
+class Email
+
+  include DataMapper::Resource
+
+  property :id,             Serial
+  property :name,           String, :required => false
+  property :email,          String, :required => false
+
+end
+
 class Group
   
   include DataMapper::Resource
