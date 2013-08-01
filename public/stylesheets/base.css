@@ -183,4 +183,5 @@ body {
 
 #submitimagesrc:hover {
 	background: url("/assets/submit_hover.jpg");
+	background-position: -123px 0;
 }
