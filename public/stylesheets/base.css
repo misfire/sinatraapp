@@ -104,6 +104,18 @@ height: 29px;
     background: url("../assets/voteNow_idle.jpg") no-repeat; border: none;
 }
 
+#test1{
+
+	z-index:100;
+    position:absolute;    
+    font-size: 12px;
+    left:94px;
+    top:988px;
+    	width: 97px;
+height: 29px;
+    background: url("../assets/voteNow_idle.jpg") no-repeat; border: none;
+}
+
 #votedimage5{
 
 	z-index:100;
