@@ -182,7 +182,7 @@ body {
 }
 
 #submitimage:hover {
-	background: url("/assets/submit_hover.jpg");
-	width: 165px;
-height: 59px;
+	background: url("/assets/submit_hover.jpg") no-repeat; border: none;
+	width: 97px;
+height: 29px;
 }
