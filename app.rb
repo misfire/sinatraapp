@@ -16,7 +16,7 @@ class Email
   property :id,             Serial
   property :username,       String
   property :email,          String, :required => false
-  property  :created_at,    DateTime,  :required => false
+  property :created_at,    DateTime,  :required => false
 
 end
 
@@ -106,7 +106,7 @@ end
 post '/email/create' do
   @email = Email.new(params[:email])
   if @email.save
-    redirect "/admin/day/show/#{@day.id}"
+    redirect "/admin/"
   else
     redirect "/admin"
   end
