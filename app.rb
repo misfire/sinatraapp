@@ -103,6 +103,15 @@ post '/' do
 #  end
 end
 
+post '/email/create' do
+  @email = Email.new(params[:email])
+  if @email.save
+    redirect "/admin/day/show/#{@day.id}"
+  else
+    redirect "/admin"
+  end
+end
+
 get '/admin' do
   page = params[:p] || 'index'
   @groups = Group.all(:order => [:id.asc])
