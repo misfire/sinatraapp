@@ -71,6 +71,7 @@ body {
     font-size: 12px;
     left:94px;
     top:988px;
+    background: url("../assets/vote_idle.jpg") no-repeat; border: none;
 }
 
 #vote2{
@@ -80,6 +81,7 @@ body {
     font-size: 12px;
     left:361px;
     top:988px;
+    background: url("../assets/vote_idle.jpg") no-repeat; border: none;
 }
 
 #vote3{
@@ -89,6 +91,7 @@ body {
     font-size: 12px;
     left:626px;
     top:988px;
+    background: url("../assets/vote_idle.jpg") no-repeat; border: none;
 }
 
 #votedimage5{
