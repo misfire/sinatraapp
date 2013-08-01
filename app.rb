@@ -106,7 +106,7 @@ end
 post '/email/create' do
   @email = Email.new(params[:email])
   if @email.save
-    redirect "/admin/"
+    redirect "/admin"
   else
     redirect "/admin"
   end
