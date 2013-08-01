@@ -106,13 +106,11 @@ height: 29px;
 
 #test1{
 
-	z-index:100;
+	z-index:105;
     position:absolute;    
-    font-size: 12px;
-    left:94px;
-    top:988px;
+    
     	width: 97px;
-height: 29px;
+	height: 29px;
     background: url("../assets/voteNow_idle.jpg") no-repeat; border: none;
 }
 
