@@ -74,6 +74,12 @@ body {
     background: url("../assets/vote_idle.jpg") no-repeat; border: none;
 }
 
+#vote1:hover {
+	position:absolute;
+	opacity:1.0;
+	background: url("../assets/vote+hover.jpg") no-repeat; border: none;
+}
+
 #vote2{
 
 	z-index:100;
