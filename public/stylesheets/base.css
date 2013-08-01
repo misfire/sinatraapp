@@ -115,6 +115,42 @@ height: 29px;
 	background: url("../assets/voteNow_hover.jpg") no-repeat; border: none;
 }
 
+#test2{
+
+	z-index:100;
+    position:absolute;    
+    text-indent: -9999em;
+    	width: 97px;
+	height: 29px;
+    background: url("../assets/voteNow_idle.jpg") no-repeat; border: none;
+}
+
+#test2:hover {
+	position:absolute;
+	opacity:1.0;
+		width: 97px;
+height: 29px;
+	background: url("../assets/voteNow_hover.jpg") no-repeat; border: none;
+}
+
+#test3{
+
+	z-index:100;
+    position:absolute;    
+    text-indent: -9999em;
+    	width: 97px;
+	height: 29px;
+    background: url("../assets/voteNow_idle.jpg") no-repeat; border: none;
+}
+
+#test3:hover {
+	position:absolute;
+	opacity:1.0;
+		width: 97px;
+height: 29px;
+	background: url("../assets/voteNow_hover.jpg") no-repeat; border: none;
+}
+
 #votedimage5{
 
 	z-index:100;
