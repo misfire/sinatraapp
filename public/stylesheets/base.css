@@ -151,6 +151,15 @@ height: 29px;
 	background: url("../assets/voteNow_hover.jpg") no-repeat; border: none;
 }
 
+#shopnowimage{
+
+	z-index:100;
+    position:absolute;    
+    font-size: 12px;
+    left:646px;
+    top:366px;
+}
+
 #votedimage5{
 
 	z-index:100;
