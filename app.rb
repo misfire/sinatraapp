@@ -14,8 +14,9 @@ class Email
   include DataMapper::Resource
 
   property :id,             Serial
-  property :name,           String, :required => false
+  property :username,       String
   property :email,          String, :required => false
+  property  :created_at,    DateTime,  :required => false
 
 end
 
