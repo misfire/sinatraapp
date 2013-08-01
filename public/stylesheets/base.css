@@ -183,5 +183,6 @@ body {
 
 #submitimagesrc:hover {
 	background: url("/assets/submit_hover.jpg");
-	background-color:yellow;
+	width: 165px;
+height: 59px;
 }
