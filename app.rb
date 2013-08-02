@@ -254,6 +254,17 @@ get '/admin/day/products/vote/:dayid/:id' do
   end
 end
 
+post '/vote/:dayid/:id' do
+  day = Group.get(params[:dayid])
+  @product = day.products.get(params[:id])
+  @vote = @product.votes.new(params[:vote])
+    if @vote.save
+    redirect "/admin/day/show/#{day.id}"
+  else
+    redirect "/admin"
+  end
+end
+
 get '/admin/day/promotions/show/:dayid/:id' do
   page = params[:p] || 'show'
   @day = Group.get(params[:dayid])
