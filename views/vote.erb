@@ -12,8 +12,15 @@
 
 <img id="image5" src="assets/0150_7for7_2_15.jpg" />
 
+
+
 <form action="/admin/day/create" method="post" id="vote1" enctype="multipart/form-data">
 	
+	<% @groups.products.each_with_index do |group,i| %>
+
+		<p><%= group.productname %></p>
+
+	<% end %>
 	<p>
 		<a href="?p=voted" value="<%= @groups.products %>" id="test1">Vote</a>
 		<%# <input id="" type="image" src="assets/voteNow_idle.jpg" /> %>
