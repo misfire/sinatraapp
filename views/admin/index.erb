@@ -26,4 +26,26 @@
 <% end %>
 </table>
 
+
+
+<h3>Emails</h3>
+
+<table class="table" border="0" cellpartding="0" cellspacing="10" class="list">
+	<tr>
+	<th>User Name</th>
+	<th>Email</th>
+	<th>Subscribed</th>
+	</tr>
+<% @emails.each_with_index do |group,i| %>
+	<tr<%= ' class="alt"' if i%2==0 %>>
+	  <td><a href="/admin/day/show/<%= group.id %>"><%= group.username %></a></td>
+	  <td><a href="/admin/day/show/<%= group.id %>"><%= group.email %></a></td>
+	  <td><a href="/admin/day/show/<%= group.id %>"><%= group.id %></a></td>
+
+	  <% end %>
+	</tr>	
+<% end %>
+</table>
+
+
 </div>

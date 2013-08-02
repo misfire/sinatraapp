@@ -134,6 +134,7 @@ get '/admin' do
   require_admin
   page = params[:p] || 'index'
   @groups = Group.all(:order => [:id.asc])
+  @emails = Email.all(:order => [:id.asc])
   erb :"admin/#{page}", :layout => :admin
 end
 
