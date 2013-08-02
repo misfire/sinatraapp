@@ -114,12 +114,11 @@ end
 
 get '/vote' do
   @groups = Group.first(:is_active => true)
-  "SUCCESS"
-  
+  erb :"vote"
 end
 
 get '/voted' do 
-
+  erb :"voted"
 end
 
 get '/end' do
