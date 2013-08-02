@@ -87,6 +87,10 @@ end
 # Create or upgrade the database all at once
 DataMapper.auto_upgrade!
 
+helpers do
+  include Sinatra::Authorization
+end
+
 
 get '/' do
   page = params[:p] || 'index'
