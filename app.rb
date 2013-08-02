@@ -113,6 +113,8 @@ post '/email/create' do
 end
 
 get '/vote' do
+  @groups = Group.first(:is_active => true)
+  "SUCCESS"
   
 end
 
