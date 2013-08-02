@@ -1,6 +1,7 @@
 require 'rubygems'
 require 'sinatra'
 require "data_mapper"
+require "./lib/authorization"
 
 set :raise_errors, true
 set :show_exceptions, true
@@ -126,6 +127,7 @@ get '/end' do
 end
 
 get '/admin' do
+  require_admin
   page = params[:p] || 'index'
   @groups = Group.all(:order => [:id.asc])
   erb :"admin/#{page}", :layout => :admin
