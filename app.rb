@@ -138,12 +138,14 @@ get '/admin' do
 end
 
 get '/admin/day/new' do
+  require_admin
   page = params[:p] || 'new'
   @title = "Create new Day"
   erb :"admin/day/#{page}", :layout => :admin
 end
 
 post '/admin/day/create' do
+  require_admin
   @day = Group.new(params[:day])
   if @day.save
     redirect "/admin/day/show/#{@day.id}"
@@ -153,6 +155,7 @@ post '/admin/day/create' do
 end
 
 get '/admin/day/show/:id' do
+  require_admin
   page = params[:p] || 'show'
   @day = Group.get(params[:id])
   if @day
@@ -163,6 +166,7 @@ get '/admin/day/show/:id' do
 end
 
 get '/admin/day/delete/:id' do
+  require_admin
   day = Group.get(params[:id])
   unless day.nil?
     day.destroy
@@ -171,6 +175,7 @@ get '/admin/day/delete/:id' do
 end
 
 get '/admin/day/edit/:id' do
+  require_admin
   page = params[:p] || 'edit'
   @day = Group.get(params[:id])
   if @day
@@ -181,6 +186,7 @@ get '/admin/day/edit/:id' do
 end
 
 post '/admin/day/update' do
+  require_admin
   @day = Group.get(params[:id])
   if @day.update(params[:day])
     redirect "/admin/day/show/#{@day.id}"
@@ -191,6 +197,7 @@ end
 
 
 get '/admin/day/products/new/:dayid' do
+  require_admin
   page = params[:p] || 'new'
   @day = Group.get(params[:dayid])
   @title = "Create new product"
@@ -198,6 +205,7 @@ get '/admin/day/products/new/:dayid' do
 end
 
 post '/admin/day/products/create/:dayid' do
+  require_admin
   day = Group.get(params[:dayid])
   @product = day.products.new(params[:product])
   if @product.save
@@ -208,6 +216,7 @@ post '/admin/day/products/create/:dayid' do
 end
 
 get '/admin/day/products/show/:dayid/:id' do
+  require_admin
   page = params[:p] || 'show'
   @day = Group.get(params[:dayid])
   @product = @day.products.get(params[:id])
@@ -219,6 +228,7 @@ get '/admin/day/products/show/:dayid/:id' do
 end
 
 get '/admin/day/products/edit/:dayid/:id' do
+  require_admin
   page = params[:p] || 'edit'
   @day = Group.get(params[:dayid])
   @product = @day.products.get(params[:id])
@@ -230,6 +240,7 @@ get '/admin/day/products/edit/:dayid/:id' do
 end
 
 post '/admin/day/products/update' do
+  require_admin
   @day = Group.get(params[:dayid])
   @product = @day.products.get(params[:id])
   if @product.update(params[:product])
@@ -240,6 +251,7 @@ post '/admin/day/products/update' do
 end
 
 get '/admin/day/products/delete/:dayid/:id' do
+  require_admin
   page = :dayid
   day = Group.get(params[:dayid])
   product = day.products.get(params[:id])
@@ -250,6 +262,7 @@ get '/admin/day/products/delete/:dayid/:id' do
 end
 
 get '/admin/day/products/vote/:dayid/:id' do
+  require_admin
   day = Group.get(params[:dayid])
   @product = day.products.get(params[:id])
   @vote = @product.votes.new(:email => 'aznlucidx@gmail.com', :ip_address => '192.168.0.1', :subscribed => 'true', :username => 'misfire')
@@ -272,6 +285,7 @@ post '/vote/:id' do
 end
 
 get '/admin/day/promotions/show/:dayid/:id' do
+  require_admin
   page = params[:p] || 'show'
   @day = Group.get(params[:dayid])
   @promotion = @day.promotions.get(params[:id])
@@ -283,6 +297,7 @@ get '/admin/day/promotions/show/:dayid/:id' do
 end
 
 get '/admin/day/promotions/new/:dayid' do
+  require_admin
   page = params[:p] || 'new'
   @day = Group.get(params[:dayid])
   @title = "Create new promotion"
@@ -290,6 +305,7 @@ get '/admin/day/promotions/new/:dayid' do
 end
 
 post '/admin/day/promotions/create/:dayid' do
+  require_admin
   day = Group.get(params[:dayid])
   @promotion = day.promotions.new(params[:promotion])
   if @promotion.save
@@ -300,6 +316,7 @@ post '/admin/day/promotions/create/:dayid' do
 end
 
 get '/admin/day/promotions/edit/:dayid/:id' do
+  require_admin
   page = params[:p] || 'edit'
   @day = Group.get(params[:dayid])
   @promotion = @day.promotions.get(params[:id])
@@ -311,6 +328,7 @@ get '/admin/day/promotions/edit/:dayid/:id' do
 end
 
 post '/admin/day/promotions/update' do
+  require_admin
   @day = Group.get(params[:dayid])
   @promotion = @day.promotions.get(params[:id])
   if @promotion.update(params[:promotion])
@@ -321,6 +339,7 @@ post '/admin/day/promotions/update' do
 end
 
 get '/admin/day/promotions/delete/:dayid/:id' do
+  require_admin
   page = :dayid
   day = Group.get(params[:dayid])
   promotion = day.promotions.get(params[:id])
@@ -331,6 +350,7 @@ get '/admin/day/promotions/delete/:dayid/:id' do
 end
 
 get '/admin/day/votes/show/:dayid/:id' do
+  require_admin
   @day = Group.get(params[:dayid])
   @product = @day.products.get(params[:id])
   @votes = @product.votes.all
