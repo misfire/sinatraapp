@@ -259,9 +259,9 @@ post '/vote/:id' do
   @product = Product.get(params[:id])
   @vote = @product.votes.new(params[:votes])
     if @vote.save
-    redirect "/admin"
+    redirect "/voted"
   else
-    redirect "/admin"
+    redirect "/vote"
   end
 end
 
