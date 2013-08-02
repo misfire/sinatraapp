@@ -257,7 +257,7 @@ end
 post '/vote/:id' do
   day = Group.get(params[:dayid])
   @product = Product.get(params[:id])
-  @vote = @product.votes.new(params[:vote])
+  @vote = @product.votes.new(params[:votes])
     if @vote.save
     redirect "/admin"
   else

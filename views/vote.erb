@@ -20,10 +20,10 @@
 
 	<form action="/vote/<%= group.id %>" method="post" id="vote<%= i + 1 %>" enctype="multipart/form-data">
 			<p>
-		<input type="text" id="email" name="vote[email]" value="email goes here" hidden />
-		<input type="text" id="ip_address" name="vote[ip_address]" value="ip goes here" hidden />
-		<input type="text" id="subscribed" name="vote[subscribed]" value="subscribed" hidden />
-		<input type="text" id="username" name="vote[username]" value="username" hidden />
+		<input type="text" id="email" name="votes[email]" value="email goes here" hidden />
+		<input type="text" id="ip_address" name="votes[ip_address]" value="213" hidden />
+		<input type="text" id="subscribed" name="votes[subscribed]" value="true" hidden />
+		<input type="text" id="username" name="votes[username]" value="username" hidden />
 		<input type="submit" id="test<%= i + 1 %>"></a>
 		<%# <input id="" type="image" src="assets/voteNow_idle.jpg" /> %>
 	</p>
