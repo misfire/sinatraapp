@@ -257,7 +257,7 @@ end
 post '/vote/:id' do
   day = Group.get(params[:dayid])
   @product = Product.get(params[:id])
-  @vote = @product.votes.new(:email => 'aznlucidx@gmail.com', :ip_address => '192.168.0.1', :subscribed => 'true', :username => 'misfire')
+  @vote = @product.votes.new(params[:vote])
     if @vote.save
     redirect "/admin"
   else
