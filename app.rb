@@ -106,10 +106,22 @@ end
 post '/email/create' do
   @email = Email.new(params[:email])
   if @email.save
-    redirect "/admin"
+    redirect "/vote"
   else
     redirect "/admin"
   end
+end
+
+get '/vote'
+  
+end
+
+get '/voted'
+
+end
+
+get '/end'
+  erb :"theend"
 end
 
 get '/admin' do
