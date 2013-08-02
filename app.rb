@@ -112,15 +112,15 @@ post '/email/create' do
   end
 end
 
-get '/vote'
+get '/vote' do
   
 end
 
-get '/voted'
+get '/voted' do 
 
 end
 
-get '/end'
+get '/end' do
   erb :"theend"
 end
 
