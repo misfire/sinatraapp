@@ -18,7 +18,7 @@
 	
 	<% @groups.products.each_with_index do |group,i| %>
 
-	<form action="/admin/day/create" method="post" id="vote<%= i + 1 %>" enctype="multipart/form-data">
+	<form action="/vote/<%= group.id %>" method="post" id="vote<%= i + 1 %>" enctype="multipart/form-data">
 			<p>
 		<input type="text" name="vote[email]" value="email goes here" hidden />
 		<input type="text" name="vote[ip_address]" value="ip goes here" hidden />

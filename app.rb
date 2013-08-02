@@ -254,7 +254,7 @@ get '/admin/day/products/vote/:dayid/:id' do
   end
 end
 
-post '/vote/:dayid/:id' do
+post '/vote/:id' do
   day = Group.get(params[:dayid])
   @product = day.products.get(params[:id])
   @vote = @product.votes.new(params[:vote])
