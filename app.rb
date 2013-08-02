@@ -113,7 +113,7 @@ post '/email/create' do
 end
 
 get '/vote' do
-  @groups = Group.first(:is_active => true)
+  @group = Group.first(:is_active => true)
   erb :"vote"
 end
 
