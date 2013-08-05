@@ -172,6 +172,24 @@ height: 29px;
 	background: url("../assets/shopNow_hover.jpg") no-repeat; border: none;
 }
 
+#theendlink{
+
+	z-index:100;
+    position:absolute;    
+    left:348px;
+    top:528px;
+    background: url("../assets/shopNow_idle.jpg") no-repeat; border: none;
+}
+
+#theendlink:hover{
+
+	z-index:100;
+    position:absolute;    
+    left:348px;
+    top:528px;
+    background: url("../assets/shopNow_hover.jpg") no-repeat; border: none;
+}
+
 #votedimage5{
 
 	z-index:100;
@@ -244,13 +262,6 @@ height: 29px;
     top:795px;
 }
 
-#theendlink{
-
-	z-index:100;
-    position:absolute;    
-    left:348px;
-    top:528px;
-}
 
 #submitimage
 {
