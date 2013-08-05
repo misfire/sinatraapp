@@ -70,7 +70,7 @@ body {
     position:absolute;    
     font-size: 12px;
     left:94px;
-    top:981px;
+    top:980px;
     	width: 97px;
 height: 29px;
     background: url("../assets/voteNow_idle.jpg") no-repeat; border: none;
@@ -83,7 +83,7 @@ height: 29px;
     position:absolute;    
     font-size: 12px;
     left:361px;
-    top:981px;
+    top:980px;
     background: url("../assets/voteNow_idle.jpg") no-repeat; border: none;
 }
 
@@ -93,7 +93,7 @@ height: 29px;
     position:absolute;    
     font-size: 12px;
     left:626px;
-    top:981px;
+    top:980px;
     background: url("../assets/voteNow_idle.jpg") no-repeat; border: none;
 }
 
