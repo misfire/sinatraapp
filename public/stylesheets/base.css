@@ -178,6 +178,9 @@ height: 29px;
     position:absolute;    
     left:348px;
     top:528px;
+    width: 97px;
+	height: 29px;
+	text-indent: -9999em;
     background: url("../assets/shopNow_idle.jpg") no-repeat; border: none;
 }
 
@@ -186,6 +189,9 @@ height: 29px;
     position:absolute;    
     left:348px;
     top:528px;
+    width: 97px;
+	height: 29px;
+	text-indent: -9999em;
     background: url("../assets/shopNow_hover.jpg") no-repeat; border: none;
 }
 
