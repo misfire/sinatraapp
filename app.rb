@@ -16,6 +16,7 @@ class Email
 
   property :id,             Serial
   property :username,       String
+  property :subscribed      Boolean
   property :email,          String, :required => false
   property :created_at,    DateTime,  :required => false
 
